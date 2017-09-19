@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<proxy:PageProxy xmlns="http://xamarin.com/schemas/2014/forms"
+				 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+				 xmlns:proxy="clr-namespace:MovieReview.Proxy"
+				 xmlns:sk="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+				 x:Class="MovieReview.Feature.Authentication.LoginView">
+	<ContentPage.Content>
+		<Grid RowSpacing="0">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="2*" />
+				<RowDefinition Height="50" />
+				<RowDefinition Height="3*" />
+			</Grid.RowDefinitions>
+			<Image Source="background.png" Aspect="AspectFill" Grid.RowSpan="3" />
+			<Grid BackgroundColor="#EEFF6063">
+
+			</Grid>
+			<sk:SKCanvasView x:Name="canvasView" Grid.Row="1" PaintSurface="OnCanvasViewPaintSurface" BackgroundColor="Transparent" />
+			<ContentView Grid.Row="2" BackgroundColor="#CCCCCCCC">
+
+			</ContentView>
+		</Grid>
+	</ContentPage.Content>
+</proxy:PageProxy>

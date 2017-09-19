@@ -21,6 +21,8 @@ namespace MovieReview.UWP
 		{
 			this.InitializeComponent();
 
+			//throw new NotImplementedException();
+
 			LoadApplication(new MovieReview.App());
 		}
 	}
