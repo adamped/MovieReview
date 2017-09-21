@@ -12,12 +12,16 @@
 				<RowDefinition Height="3*" />
 			</Grid.RowDefinitions>
 			<Image Source="background.png" Aspect="AspectFill" Grid.RowSpan="3" />
-			<Grid BackgroundColor="#EEFF6063">
-
-			</Grid>
-			<sk:SKCanvasView x:Name="canvasView" Grid.Row="1" PaintSurface="OnCanvasViewPaintSurface" BackgroundColor="Transparent" />
+			<ContentView BackgroundColor="#EEFF6063">
+				<Label Text="COMPANY NAME" FontSize="32" FontAttributes="Bold" TextColor="White" VerticalOptions="Center" HorizontalOptions="Center" />
+			</ContentView>
+			<sk:SKCanvasView Grid.Row="1" BackgroundColor="Transparent" PaintSurface="OnCanvasViewPaintSurface" />
 			<ContentView Grid.Row="2" BackgroundColor="#CCCCCCCC">
-
+				<StackLayout VerticalOptions="Center" Padding="20,0,20,0">
+					<Entry Placeholder="email address" />
+					<Entry Placeholder="password" IsPassword="true" />
+					<Button Text="SIGN IN" BackgroundColor="#FF6063" TextColor="White" />
+				</StackLayout>
 			</ContentView>
 		</Grid>
 	</ContentPage.Content>

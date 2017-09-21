@@ -21,24 +21,20 @@ namespace MovieReview.Feature.Authentication
 
 		void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 		{
-			// Initialize the Canvas
+			// Initialize
 			SKImageInfo info = args.Info;
 			SKSurface surface = args.Surface;
 			SKCanvas canvas = surface.Canvas;
 
-			// Clear the Canvas
+			// Clear
 			canvas.Clear(Color.Transparent.ToSKColor());
-			
+
 			var rect = new SKRect(0, (info.Height) * -1, info.Width, info.Height);
-			
+
 			SKPaint arcPaint = new SKPaint
 			{
-				Style = SKPaintStyle.StrokeAndFill,
-				Color = Color.FromHex("#FF6063").ToSKColor().WithAlpha(0xEE),
-		
+				Color = Color.FromHex("#FF6063").ToSKColor().WithAlpha(0xEE)
 			};
-
-			//canvas.DrawOval(info.Width / 2, 0, info.Width / 2, info.Height, arcPaint);
 
 			using (SKPath path = new SKPath())
 			{
@@ -48,20 +44,15 @@ namespace MovieReview.Feature.Authentication
 
 			SKPaint inversePaint = new SKPaint
 			{
-				Style = SKPaintStyle.StrokeAndFill,
-				Color = Color.FromHex("#CCCCCCCC").ToSKColor(),
-
+				Color = Color.FromHex("#CCCCCCCC").ToSKColor()
 			};
 
 			using (SKPath path = new SKPath())
 			{
-				
 				path.AddArc(rect, 0, 180);
 				path.FillType = SKPathFillType.InverseEvenOdd;
 				canvas.DrawPath(path, inversePaint);
 			}
-
-
 		}
 	}
 }
