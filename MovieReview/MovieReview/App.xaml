@@ -2,9 +2,35 @@
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MovieReview.App">
-	<Application.Resources>
+    <Application.Resources>
+        <ResourceDictionary>
 
-		<!-- Application resource dictionary -->
+            <ControlTemplate x:Key="MainPageTemplate">
 
-	</Application.Resources>
+                <StackLayout>
+                    <Label Text="Header Content" FontSize="24" />
+                    <ContentPresenter />
+                </StackLayout>
+
+            </ControlTemplate>
+
+
+            <Style TargetType="VisualElement" x:Key="BaseStyle">
+                <Setter Property="HeightRequest" Value="30" />
+            </Style>
+
+            <Style TargetType="Button" x:Key="ButtonStyle" BasedOn="{StaticResource BaseStyle}">
+                <Setter Property="BackgroundColor" Value="#fd42a2" />
+            </Style>
+
+            <!--<Style TargetType="Label" x:Key="Heading1DarkStyle" BasedOn="{StaticResource Heading1LabelStyle}">
+                <Setter Property="TextColor" Value="Black" />
+            </Style>
+
+            <Style TargetType="Label" x:Key="Heading1LightStyle" BasedOn="{StaticResource Heading1LabelStyle}">
+                <Setter Property="TextColor" Value="White" />
+            </Style>-->
+
+        </ResourceDictionary>
+    </Application.Resources>
 </Application>

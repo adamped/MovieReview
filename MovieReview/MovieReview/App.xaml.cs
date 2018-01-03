@@ -21,7 +21,7 @@ namespace MovieReview
 						.Get<INavigationService>()
 						.Navigate(new StackOptions()
 						{
-							StackChoice = Stacks.Authentication
+							StackChoice = Stacks.Main
 						});
 		}
 

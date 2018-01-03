@@ -20,7 +20,7 @@
 				<StackLayout VerticalOptions="Center" Padding="20,0,20,0">
 					<Entry Placeholder="email address" />
 					<Entry Placeholder="password" IsPassword="true" />
-					<Button Text="SIGN IN" BackgroundColor="#FF6063" TextColor="White" />
+					<Button Text="SIGN IN" BackgroundColor="#FF6063" TextColor="White" Style="{StaticResource ButtonStyle}" />
 				</StackLayout>
 			</ContentView>
 		</Grid>
