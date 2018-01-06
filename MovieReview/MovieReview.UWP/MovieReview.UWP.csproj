@@ -90,6 +90,8 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Content Include="Assets\OpenSans-Bold.ttf" />
+    <Content Include="Assets\OpenSans-Regular.ttf" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
