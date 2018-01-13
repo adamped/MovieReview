@@ -11,21 +11,21 @@ namespace MovieReview
 		public App()
 		{
 			InitializeComponent();
+            
+            // If you want to set specific platform only options, move this to each native platform project
+            Exrin.Framework.App.Init();
 
-			// If you want to set specific platform only options, move this to each native platform project
-			Exrin.Framework.App.Init();
+            // Everything is setup, and the MainPage set here
+            Bootstrapper.GetInstance()
+                        .Init()
+                        .Get<INavigationService>()
+                        .Navigate(new StackOptions()
+                        {
+                            StackChoice = Stacks.Main
+                        });
+        }
 
-			// Everything is setup, and the MainPage set here
-			Bootstrapper.GetInstance()
-						.Init()
-						.Get<INavigationService>()
-						.Navigate(new StackOptions()
-						{
-							StackChoice = Stacks.Main
-						});
-		}
-
-		protected override void OnStart()
+        protected override void OnStart()
 		{
 			// Handle when your app starts
 		}
